@@ -1,0 +1,43 @@
+ {% extends "base.html" %}
+
+
+ {% block content %}
+    <div class="app">
+       <div class="container">
+         <div class="row">
+         <div class="col-md-8 mx-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5><p>Enter Customer Details to Predict If the Customer Will Order Again</p></h5>
+             <form  method="POST" action="/predictions">
+              <label>Enter the Age of the Customer:</label>
+              <input class="form-control" name="a">
+              <label>Enter the Gender of the Customer (1 = Male, 0 = Female)</label>
+              <input class="form-control" name="b">
+              <label>Marital Status of the Customer (1 = Single, 2 = Married, 3 = Not Revealed)</label>
+              <input class="form-control" name="c">
+              <label>Occupation of the Customer (Student = 1, Employee = 2, Self Employeed = 3, House wife = 4)</label>
+              <input class="form-control" name="d">
+              <label>Monthly Income</label>
+              <input class="form-control" name="e">
+              <label>Educational Qualification (Graduate = 1, Post Graduate = 2, Ph.D = 3, School = 4, Uneducated = 5)</label>
+              <input class="form-control" name="f">
+              <label>Family Size</label>
+              <input class="form-control" name="g">
+              <label>Pin Code:</label>
+              <input class="form-control" name="h">
+              <label>Review of the Last Order (1 = Positive, 0 = Negative)</label>
+              <input class="form-control" name="i">
+              <button type="submit" class="btn btn-primary mt-2">Make predictions</button>
+             </form>
+            </div>
+          </div>
+         </div>
+         </div>
+        
+       </div>
+
+    </div>
+
+ 
+{% endblock %}
